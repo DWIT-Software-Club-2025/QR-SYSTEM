@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Html5Qrcode } from 'html5-qrcode';
-
+import "../App.css"
 const Scanner = () => {
   const [scannedData, setScannedData] = useState(null);
   const [error, setError] = useState(null);
@@ -45,11 +45,18 @@ const Scanner = () => {
     }
   };
 
+
   return (
     <div className='flex flex-col justify-center items-center align-middle'>
       <div id="qr-reader"></div>
       <h1 className='font-semibold text-5xl mb-30p p-10'>Upload Your QR Code</h1>
-      <input className='p-40 flex-col justify-center ' type="file" accept="image/*" onChange={handleFileChange} />
+      <input id="file-input" className='hidden' type="file" accept="image/*" onChange={handleFileChange} />
+      <button
+        className='custom-file-upload p-40 flex-col justify-center'
+        onClick={() => document.getElementById('file-input').click()}
+      >
+        Choose File
+      </button>
       {error && <p>Error: {error}</p>}
       {scannedData && <p>Scanned Data: {scannedData}</p>}
     </div>

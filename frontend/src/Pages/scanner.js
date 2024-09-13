@@ -46,9 +46,10 @@ const Scanner = () => {
   };
 
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center align-middle'>
       <div id="qr-reader"></div>
-      <input type="file" accept="image/*" onChange={handleFileChange} />
+      <h1 className='font-semibold text-5xl mb-30p p-10'>Upload Your QR Code</h1>
+      <input className='p-40 flex-col justify-center ' type="file" accept="image/*" onChange={handleFileChange} />
       {error && <p>Error: {error}</p>}
       {scannedData && <p>Scanned Data: {scannedData}</p>}
     </div>

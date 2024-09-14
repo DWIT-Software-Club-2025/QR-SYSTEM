@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import softlogo from '../assets/softlogo.svg'
+import softlogo from '../assets/softlogo.svg';
 
 function Navbar() {
   return (
@@ -12,7 +12,7 @@ function Navbar() {
             <NavLink to='/' className="text-textShade">Home</NavLink>
           </li>
           <li>
-            <NavLink to='/about' className="text-textShade">About</NavLink>
+            <a href='http://localhost:8000/login' className="text-textShade">Login</a>
           </li>
         </ul>
       </div>

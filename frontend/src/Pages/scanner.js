@@ -47,20 +47,19 @@ const Scanner = () => {
 
 
   return (
-    <div className='flex flex-col justify-center items-center align-middle'>
-      <div id="qr-reader"></div>
-      <h1 className='font-semibold text-5xl mb-30p p-10'>Upload Your QR Code</h1>
+    <div className='flex flex-col justify-center items-center align-middle p-4 sm:p-6 md:p-8 lg:p-10'>
+      <div id="qr-reader" className='w-full max-w-md'></div>
+      <h1 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 sm:mb-8 md:mb-10 lg:mb-12 p-4 sm:p-6 md:p-8 lg:p-10 text-center'>Upload Your QR Code</h1>
       <input id="file-input" className='hidden' type="file" accept="image/*" onChange={handleFileChange} />
       <button
-        className='custom-file-upload p-40 flex-col justify-center'
+        className='custom-file-upload p-2 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-center'
         onClick={() => document.getElementById('file-input').click()}
       >
         Choose File
       </button>
-      {error && <p>Error: {error}</p>}
-      {scannedData && <p>Scanned Data: {scannedData}</p>}
+      {error && <p className='text-red-500 mt-4'>{error}</p>}
+      {scannedData && <p className='mt-4'>{scannedData}</p>}
     </div>
   );
 };
-
 export default Scanner;

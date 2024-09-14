@@ -12,7 +12,7 @@ function Navbar() {
             <NavLink to='/' className="text-textShade">Home</NavLink>
           </li>
           <li>
-            <a href='http://localhost:8000/login' className="text-textShade">Login</a>
+            <a href='http://54.174.207.215:8000/login/login/?next=/login/' className="text-textShade">Login</a>
           </li>
         </ul>
       </div>

@@ -48,8 +48,7 @@ const Scanner = () => {
 
   return (
     <div className='flex flex-col justify-center items-center align-middle p-2 sm:p-4 md:p-6 lg:p-8'>
-      <div id="qr-reader" className='flex-grow max-w-md'>  {/* Use flex-grow to make the canvas element take up available space */}
-        {/* The canvas element will be rendered here by the html5-qrcode library */}
+      <div id="qr-reader" className='flex-grow max-w-md'>  {}
       </div>
       <h1 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8 lg:mb-10 p-2 sm:p-4 md:p-6 lg:p-8 text-center'>Upload Your QR Code</h1>
       <input id="file-input" className='hidden' type="file" accept="image/*" onChange={handleFileChange} />
